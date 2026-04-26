@@ -14,7 +14,7 @@ export const login = async (apiBase: string): Promise<void> => {
 
   console.log(kleur.dim(`Loopback server listening on ${loopback.redirectUri}`));
 
-  const startResp = await client.post('/auth/github/start', {
+  const startResp = await client.post('/auth/github', {
     client_type: 'cli',
     code_challenge: codeChallenge,
     redirect_uri: loopback.redirectUri,
